@@ -5,6 +5,7 @@
   Time: 4:12 PM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="javax.servlet.jsp.JspWriter" %>
 <%@ page import="java.util.Map" %>
 <%@ page import="java.util.HashMap" %>
 <%@ page import="java.io.PrintWriter" %>
@@ -28,12 +29,12 @@
 
     String result = dic.get(search);
 
-    PrintWriter writer = response.getWriter();
+
     if (result != null) {
-        writer.println("Word: " + search);
-        writer.println("Result: " + result);
+        out.println("Word: " + search);
+        out.println("Result: " + result);
     } else {
-        writer.println("Not found");
+        out.println("Not found");
     }
 
 %>
